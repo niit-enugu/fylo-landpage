@@ -50,6 +50,7 @@
 .nav a {
     text-decoration: none;
     color: var(--Desaturated-Blue);
+    font-family: 'Raleway', sans-serif;
 }
 
 /* styling   the main content  */
@@ -74,6 +75,7 @@
 .curve {
     position: absolute;
     top: -80px;
+    width: 100%;
 }
 
 .left,
@@ -114,6 +116,10 @@
     border-color: var(--Bright-Blue);
     color: #fff;
     padding: 13px 50px;
+    cursor: pointer;
+}
+.input-cont input[type='button']:hover {
+    opacity: 75%;
 }
 
 .link {
@@ -132,7 +138,8 @@
 
 .profile {
     background-color: white;
-    width: 420px;
+    max-width: 420px;
+    width: 100%;
     padding: 48px;
     font-family: 'Open Sans', sans-serif;
     margin-top: 50px;
@@ -189,6 +196,11 @@
 .subscribe button {
     background-color: var(--Bright-Blue);
     color: #fff;
+    cursor: pointer;
+}
+
+.subscribe button:hover {
+    background-color: hsl(224, 61%, 64%);
 }
 .section3 .left {
     width: 44%;
@@ -216,17 +228,24 @@
 .ldiv div {
     padding: 5px 0;
 }
+.mnav a p:hover,
+.rnav a p:hover,
+.fa-brands:hover {
+    color: var(--Bright-Blue);
+    border-color: var(--Bright-Blue);
+}
+
 .ldiv div {
     gap: 10px;
 }
 
-.fa-brands{
+.fa-brands {
     color: #fff;
     font-size: 1rem;
     border: 2px solid #fff;
     padding: 8px 10px;
     border-radius: 100%;
-    margin: 0 5spx;
+    margin: 0 5px;
 }
 
 /* attribution styling  */
@@ -236,4 +255,116 @@
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+/* Media query styles  */
+
+@media screen and (max-width: 375px) {
+    /* header styling */
+
+    .logo {
+        width: 80px;
+    }
+    .header {
+        padding: 20px 30px;
+    }
+    .nav {
+        gap: 20px;
+    }
+    .nav a {
+        font-size: 0.8rem;
+    }
+
+    /* sections styling  */
+    .section {
+        flex-direction: column-reverse;
+        padding: 60px 30px;
+    }
+
+    .section2 {
+        margin-top: 200px;
+        background-color: var(--Light-Grayish-Blue);
+        width: 100%;
+        position: relative;
+    }
+    .left,
+    .figure,
+    .subscribe {
+        width: 100%;
+    }
+    .headline {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .section2 .headline {
+        font-size: 1.1rem;
+    }
+    .section2 .desc {
+        font-size: 0.83rem;
+        text-align: left;
+    }
+    .desc {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .input-cont input[type='text'] {
+        max-width: 375px;
+        margin: 0 0 15px 0;
+    }
+    .input-cont input[type='button'] {
+        width: 100%;
+    }
+    .link {
+        margin: 0 auto;
+    }
+    .link a {
+        text-align: center;
+        font-size: 0.84rem;
+        justify-content: center;
+    }
+
+    .profile {
+        padding: 25px;
+    }
+
+    .quote-text {
+        font-size: 0.71rem;
+    }
+    .name {
+        font-size: 0.8rem;
+    }
+    .position {
+        font-size: 0.6rem;
+    }
+    .avi {
+        height: 40px;
+        width: 40px;
+    }
+
+    .section3 {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .subscribe {
+        padding: 0;
+    }
+    .subscribe button {
+        width: 100%;
+    }
+
+    .section3 .left {
+        width: 100%;
+    }
+    .footer {
+        padding: 50px 30px;
+    }
+    .bottom {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .socials {
+        text-align: center;
+    }
 }
